@@ -1,0 +1,32 @@
+.contacts-list{
+
+    font-size: large;
+    text-align: left;
+    list-style:decimal;
+
+}
+.contact-name{
+    height: 40px;
+    display: flex;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgb(88, 87, 87);
+
+}
+.contact-num {
+    margin-left: 20px;
+    
+
+}
+.delete-btn {
+    height: 30px;
+    width: 70px;
+    
+    margin-left: auto;
+    background-color: #fff;
+    border: 1px solid #000;
+    transition: box-shadow 400ms ease-in-out;
+}
+
+.delete-btn:hover {
+    box-shadow: -1px 1px 10px 7px rgba(247, 150, 150, 0.75);
+}
