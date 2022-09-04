@@ -1,13 +1,24 @@
+import React, { Component } from "react";
 import PropTypes from 'prop-types';
 
 
-export default function ContactsItem ({ name, number, deleteHandler, id}){
+export default class ContactsItem extends Component {
+    onItemMouseOver = (e) => {
+        e.currentTarget.classList.toggle('focus');
+    }
+    onItemMouseleave = (e) => {
+        e.currentTarget.classList.toggle('focus');
+    }
+    render(){ 
+        const { name, number, deleteHandler, id } = this.props;
     return (
-        <li className='contact-name'>{name}:
+        <li onMouseOut={this.onItemMouseleave} onMouseOver={this.onItemMouseOver} className='contact-item'>
+            <span className='contact-name'>{name}:</span>
             <span className='contact-num'>{number}</span>
-            <button className='delete-btn' type='button' onClick={()=> deleteHandler(id)}>Delete</button>
+            <button className='delete-btn' type='button' onClick={() => deleteHandler(id)}>Delete</button>
         </li>
-)
+    )
+}
 }
 ContactsItem.propTypes = {
     name: PropTypes.string.isRequired,
