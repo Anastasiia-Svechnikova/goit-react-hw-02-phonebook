@@ -11,12 +11,12 @@ export default class ContactsItem extends Component {
         e.currentTarget.classList.toggle('focus');
     }
     render(){ 
-        const { name, number, deleteHandler, id } = this.props;
+        const { name, number, deleteHandler } = this.props;
     return (
         <li onMouseOut={this.onItemMouseleave} onMouseOver={this.onItemMouseOver} className='contact-item'>
             <span className='contact-name'>{name}:</span>
             <span className='contact-num'>{number}</span>
-            <Button classes={['delete-btn']} type="button" onClickHandler={() => deleteHandler(id)}>Delete</Button>
+            <Button classes={['delete-btn']} type="button" onClickHandler={deleteHandler}>Delete</Button>
         </li>
     )
 }
@@ -24,6 +24,6 @@ export default class ContactsItem extends Component {
 ContactsItem.propTypes = {
     name: PropTypes.string.isRequired,
     number: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
+    // id: PropTypes.string.isRequired,
     deleteHandler: PropTypes.func.isRequired,
 }

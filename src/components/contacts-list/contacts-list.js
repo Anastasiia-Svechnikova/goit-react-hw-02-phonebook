@@ -10,8 +10,7 @@ export default function ContactsList({ contacts, onDeleteBtn }) {
                     key={id}
                     name={name}
                     number={number}
-                    id = {id}
-                    deleteHandler={onDeleteBtn} />)}
+                    deleteHandler={()=> onDeleteBtn(id)} />)}
         </ul>
     )
 }
