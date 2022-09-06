@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import ContactsItem from 'components/contacts-item';
+import ContactsItem from 'components/Contacts-item';
 import './contacts-list.css'
 
 export default function ContactsList({ contacts, onDeleteBtn }) {

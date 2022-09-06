@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
 import "./form.css"
+import Button from "components/Button";
 
 
 export default class Form extends Component{
@@ -57,7 +58,7 @@ export default class Form extends Component{
                         required
                     />
                 </label>
-                <button className="sbmt-btn" type="submit">Add Contact</button>
+                <Button type="submit" classes={['sbmt-btn']}>Add contact</Button>
         </form>
     )
 }

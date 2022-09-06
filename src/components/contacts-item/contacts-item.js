@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
+import Button from "components/Button";
 
 
 export default class ContactsItem extends Component {
@@ -15,7 +16,7 @@ export default class ContactsItem extends Component {
         <li onMouseOut={this.onItemMouseleave} onMouseOver={this.onItemMouseOver} className='contact-item'>
             <span className='contact-name'>{name}:</span>
             <span className='contact-num'>{number}</span>
-            <button className='delete-btn' type='button' onClick={() => deleteHandler(id)}>Delete</button>
+            <Button classes={['delete-btn']} type="button" onClickHandler={() => deleteHandler(id)}>Delete</Button>
         </li>
     )
 }

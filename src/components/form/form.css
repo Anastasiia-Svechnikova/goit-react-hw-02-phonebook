@@ -13,11 +13,3 @@ outline-color: #000;
 border: none;
     border-bottom: 1px solid rgb(88, 87, 87);
 }
-.sbmt-btn{
-    background-color: #fff;
-    border: 1px solid #000;
-    transition: box-shadow 400ms ease-in-out;
-}
-.sbmt-btn:hover {
-box-shadow:  -1px 1px 10px 7px rgba(188, 254, 166, 0.75);
-}

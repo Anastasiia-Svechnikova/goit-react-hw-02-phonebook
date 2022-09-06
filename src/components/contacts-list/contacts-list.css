@@ -20,19 +20,7 @@
     min-width: 40%
 }
 
-.delete-btn {
-    height: 30px;
-    width: 70px;
-    
-    margin-left: auto;
-    background-color: #fff;
-    border: 1px solid #000;
-    transition: box-shadow 400ms ease-in-out;
-}
 
-.delete-btn:hover {
-    box-shadow: -1px 1px 10px 7px rgba(247, 150, 150, 0.75);
-}
 .focus{
     transform: scale(1.05);
 }
