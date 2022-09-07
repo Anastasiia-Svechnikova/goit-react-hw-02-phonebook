@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { nanoid } from 'nanoid';
 import PropTypes from 'prop-types';
-import "./form.css"
+import s from "./form.module.css";
 import Button from "components/Button";
 
 
@@ -32,12 +32,12 @@ export default class Form extends Component{
     render() {
 
         return (
-            <form className="form" onSubmit={this.onFormSubmit}>  
-                <label className="label">
+            <form className={s.form} onSubmit={this.onFormSubmit}>  
+                <label className={s.label}>
                     Name 
                     <input onChange={this.onInputChange}
                         value={this.state.name}
-                        className="input"
+                        className={s.input}
                         type="text"
                         name="name"
                         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -45,12 +45,12 @@ export default class Form extends Component{
                         required
                     />
                 </label>
-                <label className="label">
+                <label className={s.label}>
                     Number 
                     <input
                         onChange={this.onInputChange}
                         value={this.state.number}
-                        className="input"
+                        className={s.input}
                         type="tel"
                         name="number"
                         pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
@@ -58,7 +58,7 @@ export default class Form extends Component{
                         required
                     />
                 </label>
-                <Button type="submit" classes={['sbmt-btn']}>Add contact</Button>
+                <Button type="submit" sbmt >Add contact</Button>
         </form>
     )
 }

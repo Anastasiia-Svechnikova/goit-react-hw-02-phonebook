@@ -1,11 +1,4 @@
-.contacts-list{
-
-    font-size: large;
-    text-align: left;
-    list-style:decimal;
-
-}
-.contact-item{
+.item {
     height: 40px;
     display: flex;
     margin-bottom: 15px;
@@ -14,13 +7,14 @@
     transition: transform 150ms ease-in;
 
 }
-.contact-name{
-    font-family:serif;
+
+.name {
+    font-family: serif;
     font-style: italic;
     min-width: 40%
 }
 
 
-.focus{
+.focus {
     transform: scale(1.05);
 }

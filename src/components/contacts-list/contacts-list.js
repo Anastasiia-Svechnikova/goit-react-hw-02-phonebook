@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import ContactsItem from 'components/Contacts-item';
-import './contacts-list.css'
+import s from './contacts-list.module.css'
 
 export default function ContactsList({ contacts, onDeleteBtn }) {
     return (
-        <ul className='contacts-list'>
+        <ul className={s.list}>
             {contacts.map(({ id, name, number }) =>
                 <ContactsItem
                     key={id}

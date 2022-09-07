@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import s from './filter.module.css';
 
 export default function Filter({ filterHandler, filter }) {
     return (
@@ -8,7 +9,7 @@ export default function Filter({ filterHandler, filter }) {
                 onChange={filterHandler}
                 type="text"
                 value={filter}
-                className="input"
+                className={s.input}
             ></input>
         </label>
     )
