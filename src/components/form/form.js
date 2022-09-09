@@ -28,6 +28,9 @@ export default class Form extends Component{
         number: '',
     })
     }
+    handler(e) {
+        console.dir(e.target)
+    }
 
     render() {
 
@@ -58,7 +61,7 @@ export default class Form extends Component{
                         required
                     />
                 </label>
-                <Button type="submit" sbmt >Add contact</Button>
+                <Button type="submit" sbmt onClickHandler={this.handler} >Add contact</Button>
         </form>
     )
 }
