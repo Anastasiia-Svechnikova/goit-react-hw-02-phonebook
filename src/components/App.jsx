@@ -17,7 +17,11 @@ export class App extends Component {
   }
 
 
-  handleFormSubmit=(data)=> {
+  handleFormSubmit = (data) => {
+    if (this.state.contacts.some(({ name }) => name === data.name)) {
+      alert(`${data.name} is already in contacts!`);
+      return;
+    }
     this.setState(prevState => {
       return {contacts: [...prevState.contacts, data]}
     })
